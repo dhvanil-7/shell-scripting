@@ -26,8 +26,8 @@ for i in `find -maxdepth 1 -type f -size +1b`
 do
     if [ $RUN -eq 0 ]
     then
-        echo "[$(date "%Y-%m-%d %H-%M-%S")] archiving $i => $BASE/archive/$i"
-        gzip $i || exit 1
-        mv $i.gz $BASE/archive || exit 1
+        echo "[$(date "+%Y-%m-%d %H:%M:%S")] archiving $i => $BASE/archive"
+        # gzip $i || exit 1
+        # mv $i.gz $BASE/archive || exit 1
     fi
 done
